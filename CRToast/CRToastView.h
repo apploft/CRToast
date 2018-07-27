@@ -6,6 +6,14 @@
 #import <UIKit/UIKit.h>
 #import "CRToast.h"
 
+#ifndef isIphoneX
+#define isIphoneX (([[UIScreen mainScreen] nativeBounds].size.height) == 2436)
+#endif
+
+#ifndef naviBarHeightOffset
+#define naviBarHeightOffset (isIphoneX ? 24 : 0)
+#endif
+
 /**
  Calculate the width of the view given all necessary values of the given `CRToastView`s properties
  
