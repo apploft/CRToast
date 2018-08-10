@@ -14,6 +14,10 @@
 #define naviBarHeightOffset (isIphoneX ? 24 : 0)
 #endif
 
+#ifndef naviBarLeftInsetOffset
+#define naviBarLeftInsetOffset (isIphoneX ? 15 : 0)
+#endif
+
 /**
  Calculate the width of the view given all necessary values of the given `CRToastView`s properties
  
