@@ -10,8 +10,8 @@
 #define isIphoneX (([[UIScreen mainScreen] nativeBounds].size.height) == 2436)
 #endif
 
-#ifndef isIPhoneXs
-#define isIPhoneXs (([[UIScreen mainScreen] nativeBounds].size.height) == 1792)
+#ifndef isIPhoneXr
+#define isIPhoneXr (([[UIScreen mainScreen] nativeBounds].size.height) == 1792)
 #endif
 
 #ifndef isIPhoneXsMax
@@ -19,11 +19,11 @@
 #endif
 
 #ifndef isNotchDevice
-#define isNotchDevice (isIphoneX || isIPhoneXs || isIPhoneXsMax)
+#define isNotchDevice (isIphoneX || isIPhoneXr || isIPhoneXsMax)
 #endif
 
 #ifndef naviBarHeightOffset
-#define naviBarHeightOffset (isIPhoneXs ? 24 : 0)
+#define naviBarHeightOffset (isNotchDevice ? 24 : 0)
 #endif
 
 #ifndef naviBarLeftInsetOffset
